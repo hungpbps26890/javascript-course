@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrays and Loops</title>
+  </head>
+  <body>
+    <script>
+      /*
+      let myArray = [1, 2, 3];
+      console.log(myArray);
+      console.log(myArray[0]);
+
+      myArray[1] = 99;
+      console.log(myArray[1]);
+
+      const myArray2 = [1, "hello", true, { name: "Hung Phan" }, [1, 2]];
+      console.log(myArray2);
+      console.log(myArray2[3]);
+      console.log(myArray2.length);
+      console.log(typeof myArray2);
+      console.log(Array.isArray(myArray2));
+
+      // Array Method
+      myArray.push(100);
+      console.log(myArray);
+
+      myArray.splice(1, 2);
+      console.log(myArray);
+      
+
+      let i = 1;
+
+      while (i <= 10) {
+        console.log(i);
+        i++;
+      }
+
+      // Sử dụng For Loop cho vòng lặp tiêu chuẩn
+      for (let i = 1; i <= 5; i++) {
+        console.log(i);
+      }
+
+      // Sử dụng While Loop cho vòng lặp không tiêu chuẩn
+      let randomNumber = 0;
+
+      while (randomNumber < 0.5) {
+        console.log(randomNumber);
+        randomNumber = Math.random();
+      }
+
+      console.log(randomNumber);
+      
+
+      // Duyệt mảng Array bằng vòng lặp
+      const todoList = ["make dinner", "wash dishes", "watch Youtube"];
+
+      for (let index = 0; index < todoList.length; index++) {
+        console.log(todoList[index]);
+      }
+
+      // Accumulator Pattern
+      const nums = [1, 2, 3];
+      let total = 0;
+
+      for (let i = 0; i < nums.length; i++) {
+        const num = nums[i];
+        total += num;
+      }
+
+      console.log(total);
+
+      const numsDoubled = [];
+      for (let i = 0; i < nums.length; i++) {
+        const num = nums[i];
+        numsDoubled.push(num * 2);
+      }
+
+      console.log(numsDoubled);
+      */
+
+      // Array Reference
+      const array1 = [1, 2, 3];
+      const array2 = array1.slice();
+
+      array2.push(4);
+
+      console.log(array1);
+      console.log(array2);
+
+      // Destructuring Array
+      const [firstValue, secondValue] = array1;
+      console.log(firstValue);
+      console.log(secondValue);
+
+      // Break và Continue
+      for (let i = 1; i <= 10; i++) {
+        if (i % 2 !== 0) {
+          continue;
+        }
+
+        console.log("Số chia hết cho 2: " + i);
+
+        if (i === 8) {
+          break;
+        }
+      }
+
+      // Array trong Function
+      function doubleArray(nums) {
+        const numsDoubled = [];
+
+        for (let i = 0; i < nums.length; i++) {
+          const num = nums[i];
+
+          if (num === 0) {
+            return numsDoubled;
+          }
+
+          numsDoubled.push(num * 2);
+        }
+
+        return numsDoubled;
+      }
+
+      console.log(doubleArray([1, 3, 5]));
+      console.log(doubleArray([1, 3, 0, 5]));
+    </script>
+  </body>
+</html>

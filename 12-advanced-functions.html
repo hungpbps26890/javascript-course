@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advanced Functions</title>
+  </head>
+  <body>
+    <button class="js-click-button">Click</button>
+
+    <script>
+      /*
+      const clickButtonElement = document.querySelector(".js-click-button");
+
+      const eventLister = () => {
+        console.log("click");
+      };
+
+      clickButtonElement.addEventListener("click", eventLister);
+
+      clickButtonElement.removeEventListener("click", eventLister);
+
+      clickButtonElement.addEventListener("click", () => {
+        console.log("click2");
+      });
+
+      /*
+      function greeting() {
+        console.log("hello");
+      }
+
+      greeting();
+
+      const function1 = function () {
+        console.log("hello1");
+      };
+
+      function1();
+      console.log(function1);
+      console.log(typeof function1);
+
+      const object1 = {
+        num: 2,
+        fun: function () {
+          console.log("hello2");
+        },
+      };
+
+      object1.fun();
+
+      // Hoisting = lời gọi hàm đứng trước block khai báo hàm
+      display(2);
+
+      function display(param) {
+        console.log(param);
+      }
+
+      function run(param) {
+        param();
+      }
+
+      run(function () {
+        console.log("hello3");
+      });
+      
+
+      // setTimeout() = Asynchronous Code
+      setTimeout(function () {
+        console.log("timeout");
+      }, 3000);
+
+      console.log("next line");
+
+      // setInterval() = lặp lại function trong khoảng thời gian delay
+      const functionInterval = setInterval(function () {
+        console.log("interval");
+      }, 3000);
+
+      // clearInterval() = kết thúc việc lặp Interval
+      setTimeout(function () {
+        clearInterval(functionInterval);
+        console.log("End interval");
+      }, 10000);
+      
+
+      // forEach() = duyệt mảng
+      ["hello", "Hi", "Alo"].forEach(function (value, index) {
+        if (value === "Hi") {
+          // Lưu ý: không thể break ra khỏi vòng lặp khi dùng forEach()
+
+          return; // tương đương với từ khóa continue
+        }
+
+        console.log("value = " + value);
+        console.log("index = " + index);
+      });
+      
+
+      // Arrow Function
+      const arrowFunction = (param, param2) => {
+        console.log("arrow function");
+        return param + param2;
+      };
+      console.log(arrowFunction(1, 2));
+
+      const regularFunction = function (param, param2) {
+        console.log("regular function");
+        return param + param2;
+      };
+      console.log(regularFunction(3, 4));
+
+      // One parameter arrow function
+      const oneParam = (param) => {
+        console.log(param + 1);
+      };
+      oneParam(1);
+
+      // One line arrow function
+      const oneLine = (param, param2) => param + param2;
+      console.log(oneLine(1, 2));
+
+      // Sử dụng Arrow function khi duyệt mảng Array bằng forEach()
+      ["hello", "Hi", "Alo"].forEach((value, index) => {
+        if (value === "Hi") {
+          // Lưu ý: không thể break ra khỏi vòng lặp khi dùng forEach()
+
+          return; // tương đương với từ khóa continue
+        }
+
+        console.log("value = " + value);
+        console.log("index = " + index);
+      });
+
+      // Sử dụng Arrow function trong Object
+      const object1 = {
+        method: () => {
+          console.log("arrow function");
+        },
+        method2() {
+          console.log("shorthand method");
+        },
+      };
+      object1.method();
+      object1.method2();
+      */
+
+      // Filter Array
+      const filterArray = [1, -3, 5].filter((value, index) => {
+        /*
+        if (value >= 0) {
+          return true;
+        } else {
+          return false;
+        }
+        */
+
+        return value >= 0;
+      });
+
+      console.log(filterArray);
+
+      // Map Array
+      const mapDoubledArray = [1, 2, 3].map((value) => value * 2);
+
+      console.log(mapDoubledArray);
+
+      // Closure
+      function outerFunction(x) {
+        // Hàm con được định nghĩa bên trong hàm cha
+        function innerFunction(y) {
+          return x + y;
+        }
+
+        return innerFunction;
+      }
+
+      const closure = outerFunction(10); // closure bây giờ là một hàm con có thể truy cập biến x
+      const result = closure(5); // Gọi closure với y = 5, kết quả là 10 + 5 = 15
+      console.log(result);
+    </script>
+  </body>
+</html>

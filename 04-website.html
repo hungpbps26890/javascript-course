@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Website</title>
+
+    <style>
+      .hello-button {
+        background-color: red;
+        padding: 10px 20px;
+
+        border: none;
+        border-radius: 4px;
+
+        font-weight: 700;
+        color: white;
+
+        cursor: pointer;
+
+        transition: opacity 0.15s;
+      }
+
+      .hello-button:hover {
+        opacity: 0.7;
+      }
+
+      .hello-button:active {
+        opacity: 0.4;
+      }
+
+      .click-button {
+        background-color: yellow;
+        padding: 10px 20px;
+
+        border: none;
+        border-radius: 4px;
+
+        font-weight: 700;
+        color: black;
+
+        cursor: pointer;
+      }
+
+      .click-button:hover {
+        opacity: 0.7;
+      }
+
+      .click-button:active {
+        opacity: 0.4;
+      }
+
+      p {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+
+        cursor: pointer;
+
+        transition: text-decoration 1s;
+      }
+
+      p:hover {
+        text-decoration: underline;
+
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="hello-button" title="hello">hello</button>
+    <p>paragraph of text <button class="click-button">click</button></p>
+  </body>
+</html>
